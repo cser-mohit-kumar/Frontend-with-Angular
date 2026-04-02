@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        nav{
+            background-color: aqua;
+            height: 70px;
+        }
+        body>div{
+            height: 600px;
+            width: 900px;
+            border: solid 3px black;
+            display: flex;
+            gap: 20px;
+        }
+        div div{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+        @media screen and (max-width:800px){
+            body>div{
+                flex-direction: column;
+            }
+        }
+    </style>
+    <nav></nav>
+    <div class="dv">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+</body>
+</html>
