@@ -1,0 +1,18 @@
+<p>component works!</p>
+<div [ngSwitch]="applyClass">
+  
+  <h1 *ngSwitchCase="true" class="classA">
+    Condition is TRUE
+  </h1>
+
+  <h1 *ngSwitchCase="false" class="classB">
+    Condition is FALSE
+  </h1>
+
+  <h1 *ngSwitchDefault>
+    No Condition Matched
+  </h1>
+
+</div>
+
+<button (click)="shouldApplyClass()">Click Me</button>

@@ -1,0 +1,64 @@
+<h2>Student Dashboard</h2>
+
+
+<div class="buttons">
+  <button (click)="changeView('list')">List</button>
+  <button (click)="changeView('table')">Table</button>
+  <button (click)="changeView('card')">Card</button>
+</div>
+
+<hr>
+
+
+@if (viewType === 'table') {
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Roll</th>
+      <th>mobile</th>
+    </tr>
+
+    @for (s of students; track $index) {
+      <tr>
+        <td>{{ s.name }}</td>
+        <td>{{ s.roll }}</td>
+        <td>{{ s.mobile }}</td>
+      </tr>
+    } @empty {
+      <tr>
+        <td colspan="3">No data available</td>
+      </tr>
+    }
+
+  </table>
+}
+
+
+@if (viewType === 'list') {
+  <ul>
+    @for (s of students; track $index) {
+      <li>
+        {{ s.name }} - {{ s.roll }} - {{ s.mobile }}
+      </li>
+    } @empty {
+      <h3>No students found</h3>
+    }
+  </ul>
+}
+
+
+@if (viewType === 'card') {
+  <div class="card-container">
+    
+    @for (s of students; track $index) {
+      <div class="card">
+        <h3>{{ s.name }}</h3>
+        <p>Roll: {{ s.roll }}</p>
+        <p>Branch: {{ s.mobile }}</p>
+      </div>
+    } @empty {
+      <h3>No cards to display</h3>
+    }
+
+  </div>
+}
