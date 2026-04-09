@@ -1,0 +1,77 @@
+<!-- <p>first-comp works!</p>
+<h1 [style]="style">{{name}}</h1>
+
+<button (click)="click()">CLICK ME</button>
+
+<div style="text-align:center; margin-top: 50px;">
+
+  <div style="border:1px solid black; padding:20px; width:200px; margin:auto;">
+    {{ items[currentIndex] }}
+  </div>
+
+  <div style="margin-top:20px;">
+    <button (click)="prev()" [disabled]="currentIndex === 0">
+      Prev
+    </button>
+
+    <button (click)="next()" [disabled]="currentIndex === items.length - 1">
+      Next
+    </button>
+  </div>
+
+</div> -->
+<!-- <button (click)="change">
+  click me
+</button> -->
+<app-childcomp (data)="handleData($event)" ></app-childcomp>
+<h1>{{d}}</h1>
+
+<!-- <h1 [ngClass]="{
+  classA:applyClass,
+  classB:!applyClass
+}">NG Class</h1> -->
+@if(applyClass){
+  <h1>Control Block</h1>
+}@else {
+  <h1>False</h1>
+}
+
+<button (click)="shouldApply()">Click Me</button>
+
+<ul>
+  @for(item of arr; track item){
+    <li>{{item}}</li>
+  }@empty {
+    <h1>nothing to display</h1>
+  }
+</ul>
+
+<ol>
+  <li *ngFor="let ele of arr">{{ele}}</li>
+</ol>
+
+<table border="">
+  <th>
+    <tr *ngFor="let ele of arr">
+      <td>{{ele}}</td>
+      <td>{{ele}}</td>
+      <td>{{ele}}</td>
+      <td>{{ele}}</td>
+    </tr>
+  </th>
+</table>
+
+
+@switch (user) {
+  @case ('ad') {
+    <p>admin</p>
+  }
+  @case ('temp') {
+    <p>temp</p>
+  }
+  @default {
+    <p>abc</p>
+  }
+}
+
+
