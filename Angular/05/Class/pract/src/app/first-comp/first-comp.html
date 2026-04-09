@@ -1,0 +1,24 @@
+<p>first-comp works!</p>
+<h1 [style]="style">{{name}}</h1>
+
+<button (click)="click()">CLICK ME</button>
+
+<div style="text-align:center; margin-top: 50px;">
+
+  <div style="border:1px solid black; padding:20px; width:200px; margin:auto;">
+    {{ items[currentIndex] }}
+  </div>
+
+  <div style="margin-top:20px;">
+    <button (click)="prev()" [disabled]="currentIndex === 0">
+      Prev
+    </button>
+
+    <button (click)="next()" [disabled]="currentIndex === items.length - 1">
+      Next
+    </button>
+  </div>
+
+</div>
+
+
