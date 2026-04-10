@@ -1,0 +1,14 @@
+nav{
+    display: flex;
+    gap: 30px;
+    height: 70px;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    align-items: center;
+    padding-left: 20px;
+}
+
+.active{
+    color: red;
+    border: solid 2px black;
+
+}

@@ -1,0 +1,11 @@
+<p>adduser works!</p>
+
+<form (ngSubmit)="handleSubmit()">
+    <fieldset>
+        <legend>Add a new User</legend>
+        <div> <input type="text" placeholder="Name"  [(ngModel)]="userData.name" name="name"></div>
+        <div> <input type="text" placeholder="Role"  [(ngModel)]="userData.name" name="Role"></div>
+        <div> <input type="text" placeholder="Image"  [(ngModel)]="userData.name" name="Imageurl"></div>
+        <button type="submit">Add User</button>
+    </fieldset>
+</form>

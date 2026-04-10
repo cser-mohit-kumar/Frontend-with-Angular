@@ -1,0 +1,29 @@
+<h1>home comp</h1>
+
+<table mat-table [dataSource]="data" >
+    <tr>
+        <th>S.NO.</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Degree</th>
+    </tr>
+    @for (item of data; track $index) {
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.degree}}</td>
+
+        </tr>
+        
+    }
+</table>
+
+<button matButton="filled">Click me</button>
+
+<button matFab aria-label="Example icon button with a delete icon">
+        delete
+      </button>
+
+ <button matButton="tonal" >Basic</button>
+    <button matButton="tonal"  disabled>Disabled</button>
