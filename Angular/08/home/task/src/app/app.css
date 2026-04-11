@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  background: purple;
+  color: white;
+  height: 1000vh;
+}
